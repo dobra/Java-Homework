@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+ "-//Hibernate/Hibernate Mapping DTD//EN"
+ "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping>
+   <class name="Persoana" table="persoane">
+      <meta attribute="class-description">
+         This class contains the employee detail. 
+      </meta>
+      <id name="id" type="int" column="id"/>
+      <set name ="excursii" cascade="all">
+      	<key column="id_persoana"/>
+      	<one-to-many class="Excursia"/>
+      </set>
+      <property name="nume" column="nume" type="java.lang.String"/>
+      <property name="varsta" column="varsta" type="int"/>
+   </class>
+   
+   <class name="Excursia" table="excursii">
+   <id name="id" column="id_excursie" type="int"/>
+   <property name="anul" column="anul" type="int"/>
+   <property name="destinatia" column="destinatie" type="string"/>
+   </class>
+</hibernate-mapping>
