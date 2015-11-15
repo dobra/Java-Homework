@@ -49,4 +49,4 @@ class Persoana {
 	return id + ", " +nume+ ", "+varsta;
 	}
 
-}
+};
