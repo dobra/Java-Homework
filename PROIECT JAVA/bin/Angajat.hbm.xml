@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+ "-//Hibernate/Hibernate Mapping DTD//EN"
+ "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping>
+   <class name="Angajat" table="angajati">
+      <meta attribute="class-description">
+         This class contains the employee detail. 
+      </meta>
+      <id name="id" type="int" column="id"/>
+      <set name ="cursuri" cascade="all">
+      	<key column="id_angajat"/>
+      	<one-to-many class="Curs"/>
+      </set>
+      <property name="nume" column="nume" type="java.lang.String"/>
+      <property name="firma" column="firma" type="java.lang.String"/>
+      <property name="functia" column="functia" type="java.lang.String"/>
+      <property name="data_angajarii)" column="data_angajarii" type="java.lang.String"/>
+   </class>
+   
+   <class name="Curs" table="cursuri">
+   <id name="id" column="id_curs" type="int"/>
+   <property name="anul" column="anul" type="int"/>
+   <property name="denumire" column="denumire" type="java.lang.String"/>
+   <property name="numar_ore," column="numar_ore," type="int"/>
+   <property name="valoare," column="valoare," type="int"/>
+   <property name="diploma_absolvire" column="diploma_absolvire" type="java.lang.String"/>
+   </class>
+</hibernate-mapping>
