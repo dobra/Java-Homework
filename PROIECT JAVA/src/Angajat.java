@@ -19,16 +19,21 @@ class Angajat {
 	@Column (name="functia")
 	private String functia;
 	
+	@Column (name="data_angajarii")
+	private String data_angajarii;
+	
 	@OneToMany(mappedBy="anga")
 	@Cascade(CascadeType.ALL)
 	private Set<Curs> cursuri;
 	
 	public Angajat(){}
-	public Angajat( int id,String nume, String firma)
+	public Angajat( int id,String nume, String firma, String functia, String data_angajarii)
 	{
 		this.id=id;
 		this.nume=nume;
 		this.firma=firma;
+		this.functia=functia;
+		this.data_angajarii=data_angajarii;
 	}
 	
 	public int getId() 
@@ -66,6 +71,15 @@ class Angajat {
 	public void setFunctia(String functia) 
 	{
 	this.functia= functia;
+	}
+	
+	public String getdata_angajarii() 
+	{
+		return data_angajarii;
+	}
+	public void setdata_angajarii(String data_angajarii) 
+	{
+	this.data_angajarii= data_angajarii;
 	}
 	
 	
