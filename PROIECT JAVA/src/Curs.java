@@ -35,8 +35,8 @@ public class Curs {
 	public Curs() {
 	}
 
-	public Curs(int id_angaj, int id_curs, String denumire, int nr_ore, int valoare, String diploma_absolvire,
-			String anul) {
+	public Curs( int id_curs, String denumire, int nr_ore, int valoare, String diploma_absolvire,
+			String anul, Angajat angaj) {
 		super();
 		this.id_curs = id_curs;
 		this.denumire = denumire;
@@ -44,6 +44,7 @@ public class Curs {
 		this.valoare = valoare;
 		this.diploma_absolvire = diploma_absolvire;
 		this.anul = anul;
+		this.anga = angaj;
 	}
 
 
@@ -63,6 +64,22 @@ public class Curs {
 		this.denumire = denumire;
 	}
 
+	public String getdiploma_absolvire() {
+		return diploma_absolvire;
+	}
+
+	public void setdiploma_absolvire(String diploma_absolvire) {
+		this.diploma_absolvire = diploma_absolvire;
+	}
+	
+	public String getanul() {
+		return anul;
+	}
+
+	public void setanul(String anul) {
+		this.anul = anul;
+	}
+	
 	public int getnumar_ore() {
 		return numar_ore;
 	}
@@ -88,7 +105,7 @@ public class Curs {
 	}
 
 	public String toString() {
-		return anga.getId() + ", " + id_curs + ", " + denumire + ", " + denumire + ", " + diploma_absolvire + ", "
-				+ numar_ore;
+		return anga.getId() + ", " + id_curs + ", " + denumire + ", " +numar_ore+", "+valoare+","+ diploma_absolvire + ", "
+				+ anul;
 	}
 }
