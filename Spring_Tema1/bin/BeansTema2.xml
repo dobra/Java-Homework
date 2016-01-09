@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:context="http://www.springframework.org/schema/context"
+  xmlns:dwr="http://www.directwebremoting.org/schema/spring-dwr"
+  xmlns:mongo="http://www.springframework.org/schema/data/mongo"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context-3.0.xsd
+    http://www.springframework.org/schema/data/mongo
+    http://www.springframework.org/schema/data/mongo/spring-mongo-1.0.xsd
+    http://www.directwebremoting.org/schema/spring-dwr
+    http://www.directwebremoting.org/schema/spring-dwr-3.0.xsd">
+
+    <context:annotation-config/>
+	<bean id="auto" class="Tema2.Autoturism">
+	<property name="pret" value="123"/>
+	<property name="viteza_max" value="200"/>
+	<property name="marca" value="marca1"/>
+	<property name="anul" value="1990"/>
+	</bean>
+	
+	<bean id="tir1" class="Tema2.Tir">
+	<property name="pret" value="100"/>
+	<property name="viteza_max" value="100"/>
+	<property name="incarcatura_max" value="3000"/>
+	</bean>
+
+	<bean id="moto" class="Tema2.Motocicleta">
+		<constructor-arg value="1200"/>
+		<constructor-arg value="270"/>
+		<constructor-arg value="Yamaha"/>
+	</bean>
+</beans>
+
