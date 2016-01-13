@@ -9,8 +9,8 @@
 <property name="hibernate.connection.release_mode">auto</property>
 <property name="hibernate.connection.username">root</property> 
 <property name="hibernate.connection.password">dobrarules1</property> 
-<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property> 
+<property name="hibernate.dialect">org.hibernate.dialect.MySQLInnoDBDialect</property> 
 <property name="show_sql">true</property>
-<mapping class="Persoana" resource="Persoana.hbm.xml"/>
+<mapping class="Masina"/>
 </session-factory>
 </hibernate-configuration>
